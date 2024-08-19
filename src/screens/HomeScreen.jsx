@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import FishList from '../components/FishList';
 import SearchBar from '../components/SearchBar';
 import { useSelector, useDispatch } from 'react-redux';
-import { setFishList } from '../features/fishSlice';
+import { setFishList } from '../features/fishSlices';
 import axios from 'axios';
 
 const HomeScreen = () => {
