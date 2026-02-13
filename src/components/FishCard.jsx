@@ -13,7 +13,11 @@ const FishCard = ({ fish }) => {
         <div className="p-4">
           <h3 className="text-xl font-bold text-gray-800">{fish.name}</h3>
           <p className="text-gray-600 text-sm mt-1">{fish.species}</p>
-          {/* Add more fish details here if needed */}
+          {fish.cost && ( // Conditionally render cost if it exists
+            <p className="text-gray-800 text-base font-semibold mt-2">
+              ${fish.cost.toFixed(2)} {/* Format as currency */}
+            </p>
+          )}
         </div>
       </div>
     </Link>

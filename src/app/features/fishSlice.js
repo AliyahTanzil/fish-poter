@@ -1,10 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+// import axios from 'axios'; // Remove axios import
+import dummyFishData from '../../api/dummyData.js'; // Import dummy data
 
 // Async thunk for fetching fish data
 export const fetchFish = createAsyncThunk('fish/fetchFish', async () => {
-  const response = await axios.get('https://api.example.com/fish'); // Placeholder API
-  return response.data;
+  // const response = await axios.get('https://api.example.com/fish'); // Removed API call
+  return dummyFishData; // Return dummy data directly
 });
 
 const fishSlice = createSlice({
